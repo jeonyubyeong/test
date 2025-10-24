@@ -1,0 +1,15 @@
+/* ex.css */
+.css-attack {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+body::after {
+  content: ""; 
+  background-image: url("https://webhook.site/3723f93b-77f1-465e-a4b7-6b5915b6f6ef/collect?probe=css_loaded");
+  display: none;
+}
